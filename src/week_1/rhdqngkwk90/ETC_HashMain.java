@@ -35,10 +35,11 @@ public class ETC_HashMain {
         //주요 기능 설명
         Integer v = m.get("키3"); //값 가져오기
         boolean conKey = m.containsKey("키2"); //키가 존재하는지 확인
+        //getOrDefault : get(key) 에서 key가 존재하지 않으면 null을 반환하는데, null 대신 기본 값을 반환하도록 할 수 있는 메소드
         m.put("키1", m.getOrDefault("키1", 0)); //키 값이 키1이면 값을 0으로 고정
         System.out.println("################ Hash Map ################");
         System.out.println(m);
-        System.out.println("값 : "+v+" 키값 확인 : "+conKey);
+        System.out.println("키3 값 : "+v+" 키2 존재 확인 : "+conKey);
         /*
          * {키1=1, 키3=3, 키2=2, 키4=5}
          * -> 순서 X             -> 중복 O 덮어써짐
@@ -61,7 +62,19 @@ public class ETC_HashMain {
         
         //주요 기능 설명
         s.add("값5"); //값을 추가
-        boolean eq = s.equals("값5"); //동등 확인
+        Set<String> s1 = new HashSet<>();
+        s1.add("A");
+        s1.add("C");
+        s1.add("B");
+
+        Set<String> s2 = new HashSet<>();
+        s2.add("A");
+        s2.add("B");
+        s2.add("C");
+
+        boolean eq1 = s.equals("값5"); //단일 값으로는 비교 X (false)
+        boolean eq2 = s1.equals(s2); //Object로 비교 O (true)
+
         int hc = s.hashCode(); //해시코드
         boolean con = s.contains("값5"); //값을 포함하는지 확인
         /*
@@ -75,7 +88,7 @@ public class ETC_HashMain {
         
         System.out.println("################ Hash Set ################");
         for(String t : s) System.out.println(t);
-        System.out.println("eq : "+eq+" hc : "+hc+" con : "+con);
+        System.out.println("eq : "+eq1+" eq2 : "+eq2+" hc : "+hc+" con : "+con);
     }
 
     static class HashTable {
@@ -107,7 +120,7 @@ public class ETC_HashMain {
         // 데이터를 저장할 리스트를 배열로 선언 -> 배열에 저장될 데이터의 타입을 LinkedList로 만든다.
         LinkedList<Node>[] data;
 
-        //해시 테이블을 만드는 순간 배열방을 얼마만큼 고정된 방을 만들지 미리 선언
+        //해시 테이블을 만드는 순간 배열방을 얼마만큼 고정된 방으로 만들지 미리 선언
         HashTable(int size) {
             this.data = new LinkedList[size];
         }
@@ -127,7 +140,7 @@ public class ETC_HashMain {
         //2) hashcode를 받아서 배열 방의 index를 받은 함수
         int convertToIndex(int hashcode) {
             return hashcode % data.length;
-        }//convertToIndex 종룐
+        }//convertToIndex 종료
 
 
         //3) 검색 시, index로 배열 방을 찾은 이후에 배열 방 안에 노드가 여러개 존재 할 때, 검색 키로 해당 노드를 찾아오는 함수
