@@ -7,8 +7,8 @@ public class ETC_EqualTest {
     public static void main(String[] args) {
         Set<String> s1 = new HashSet<>();
         s1.add("A");
-        s1.add("B");
         s1.add("C");
+        s1.add("B");
 
         HashSet<String> s2 = new HashSet<>();
         s2.add("A");
