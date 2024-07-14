@@ -9,18 +9,18 @@ public class PGS_같은숫자는싫어 {
 
         ArrayDeque<Integer> q = new ArrayDeque<>();
 
-        q.offer(arr[0]);
+        q.offer(arr[0]); // 0번째 인덱스를 추가하고 시작
 
-        for (int i = 1; i < arr.length; i++) {
-            if (q.peekLast() == arr[i]) continue;
-            q.offer(arr[i]);
+        for (int i = 1; i < arr.length; i++) { // 0번째 인덱스는 추가했기에 첫번째부터 시작
+            if (q.peekLast() == arr[i]) continue; // 이미 들어간 숫자와 같을 경우 동작하지 않음
+            q.offer(arr[i]); // 그 외에는 추가
         }
 
         answer = new int[q.size()];
         int tc = q.size();
 
         for (int i = 0; i < tc; i++) {
-            answer[i] = q.poll();
+            answer[i] = q.poll(); // 반복문을 통해 Q에 있는 값들을 배열에 저장
         }
 
         return answer;
