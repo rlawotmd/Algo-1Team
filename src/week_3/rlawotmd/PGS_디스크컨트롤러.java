@@ -1,8 +1,5 @@
 package week_3.rlawotmd;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.PriorityQueue;
 
 public class PGS_디스크컨트롤러 {
@@ -16,9 +13,9 @@ public class PGS_디스크컨트롤러 {
             pq.offer(a);
         }
 
-        System.out.print("Full PQ : ");
-        for (int[] i : pq) System.out.print("{" + i[0] + ", " + i[1] + "} ");
-        System.out.println();
+//        System.out.print("Full PQ : ");
+//        for (int[] i : pq) System.out.print("{" + i[0] + ", " + i[1] + "} ");
+//        System.out.println();
 
         int sum = 0;
         int time = 0;
@@ -28,9 +25,9 @@ public class PGS_디스크컨트롤러 {
                 pos.offer(pq.poll());
             }
 
-            System.out.print("Pos : ");
-            for (int[] i : pos) System.out.print("{" + i[0] + ", " + i[1] + "} ");
-            System.out.println();
+//            System.out.print("Pos : ");
+//            for (int[] i : pos) System.out.print("{" + i[0] + ", " + i[1] + "} ");
+//            System.out.println();
 
             if (!pos.isEmpty()) {
                 int[] a = pos.poll();
