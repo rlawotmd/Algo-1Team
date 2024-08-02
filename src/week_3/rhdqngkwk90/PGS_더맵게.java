@@ -2,15 +2,16 @@ package week_3.rhdqngkwk90;
 
 import java.util.*;
 
+//우선순위 큐 개념 문제
 public class PGS_더맵게 {
 
+    //입력
     static int[] scoville = {1, 2, 3, 9, 10, 12};
     static int K = 7;
 
+    //출력
     public static void main(String[] args) {
-
         int answer = solution(scoville, K);
-        //return answer;
         System.out.println(answer);
     }
 
