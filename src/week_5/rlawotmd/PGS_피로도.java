@@ -1,7 +1,5 @@
 package week_5.rlawotmd;
 
-import java.util.Arrays;
-
 public class PGS_피로도 {
     static int[] perm_arr;
     static int[] perm;
