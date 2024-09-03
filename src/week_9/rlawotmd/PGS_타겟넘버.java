@@ -1,4 +1,4 @@
-package week_8.rlawotmd;
+package week_9.rlawotmd;
 
 public class PGS_타겟넘버 {
     static int answer;
