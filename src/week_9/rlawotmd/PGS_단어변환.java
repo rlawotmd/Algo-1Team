@@ -1,4 +1,4 @@
-package week_8.rlawotmd;
+package week_9.rlawotmd;
 
 public class PGS_단어변환 {
     static boolean[] v;
