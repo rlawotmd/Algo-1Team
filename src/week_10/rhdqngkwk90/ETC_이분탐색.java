@@ -4,7 +4,7 @@ public class ETC_이분탐색 {
 
     static int[] arr = {10, 13, 17, 30, 41, 45};
     static int key = 41;
-
+ 
     //출력
     public static void main(String[] args) {
         System.out.println(" === 반복문으로 구현 === ");

@@ -7,7 +7,7 @@ public class PGS_입국심사 {
     //입력
     static int n = 6;
     static int[] times = {7, 10};
-
+ 
     //출력
     public static void main(String[] args) {
         long answer = solution(n, times);
